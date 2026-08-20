@@ -1,0 +1,23 @@
+câu 1:chuyển D:\Gapo\Du An\tao use case\group-usecases\references\raw\Checklist_Group.xlsx sang csv dựa vào D:\Gapo\Du An\tao use case\group-usecases\.claude1\skills\transform-xlsx-to-csv.md
+câu 2: 
+dựa vào D:\Gapo\Du An\tao use case\group-usecases\references\checklists\Checklist_Group_Group.csv , D:\Gapo\Du An\tao use case\group-usecases\.claude1\skills\create-usercase-M3.md, D:\Gapo\Du An\tao use case\group-usecases\references\raw\Group Membership Service.yaml, D:\Gapo\Du An\tao use case\group-usecases\references\raw\Group Service.yaml và D:\Gapo\Du An\tao use case\group-usecases\references\raw\Suggest Group Service.yaml  hãy tạo usecase cho tôi (dưới dạng csv)
+ câu 3:
+ /D:/Gapo/Du An/tao use case/group-usecases/references/usecases/UC-Group.csv dùng D:\Gapo\Du An\tao use case\group-usecases\.claude1\skills\fill-M3-to-final-uc.md chuyểb file trên thành file test cuối
+ 
+ 
+B = chỉ giao tiếp nội bộ trong hệ thống (mặc định).
+M = có giao tiếp với hệ thống/bên ngoài (VD: đăng nhập qua VNeID, tích hợp cổng thanh toán, gọi API của hệ thống khác).
+Case "Đồng bộ bảng Thành viên tương tác khi đổi tab hoặc bộ lọc thời gian" chỉ mô tả việc đồng bộ trạng thái nội bộ trong cùng 1 màn hình (đổi tab thì reset phân trang, đổi bộ lọc thì bảng tự cập nhật lại) — hoàn toàn không có kết nối/gọi API tới hệ thống ngoài nào cả. Từ "đồng bộ" ở đây là đồng bộ UI state nội bộ, không phải "liên thông dữ liệu với hệ thống liên quan" như điều kiện M yêu cầu.
+
+→ Giữ nguyên BMT = B là đúng.
+
+(Mục "Chưa nhập tên phần mềm/dự án" ở trên vẫn là câu hỏi cũ mình chưa xử lý được — không tìm thấy ô đó trong file xlsm, có thể nằm ở công cụ review riêng. Bạn cho biết chỗ điền thì mình bổ sung.)
+case 50 bỏ (bỏ bên web nữa)
+case 5: giới hạn là 4gb chứ kp 100mb
+chỗ giới hạn 100mb ở các case khác cũng chuyển lên 4gb
+========================
+case 5: giới hạn là 4gb chứ kp 100mb
+Bỏ các case 7, 21, 26, 27, 28, 29, 30,31, 56, 59, 62, 65
+V	Nhóm bạn quản lý — Quản trị nhóm => tên tác nhân: là admin của nhóm mới vào đc
+case 32 tìm kiếm thành viên nên tách ra là 1 usecase, nếu có usecase đó r thì k cần
+case 50 bỏ

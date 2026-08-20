@@ -1,0 +1,30 @@
+fix leak memory on feed
+
+TC-GROUP-001: vào group mất 11s => bỏ qua
+ 
+ 	
+TC-NET-001: case này bỏ lại
+
+ 
+TC-SCHED-001 k có hẹn h trên post của gapo app
+TC-SCHED-002 k có hẹn h trên post của gapo app
+
+Lu Trinh SDT 2 0374244133/Gapo@2024 => người tạo
+
+0900111150 => quan sát và đc phân
+Gapo@132
+
+0900111154 =
+Gapo@132
+ 
++84374741640/Gapo@2024 Lu Trinh SDT 1 
++84374244133/Gapo@2024 Lu Trinh SDT 2 
+
+Thương:  lỗi, từ task có thể nhìn đc cha nhưng hiện thì k nhìn đc
+
+tester@gapo.com.vn/Yeuthuongdongdoi1234 : để tải phần mềm
+
+
+Đang xử lý như nào để tối ưu, tại trên web đang 24KR nhưng trên đth có 3KR
+
+Thành viên , Phòng ban ( chọn all), Phòng ban ( tick chọn TBP), Phòng ban ( all tổ chức), Chức vụ ( all), Chức vụ ( lẻ), TP Hà nội, Nhóm chat

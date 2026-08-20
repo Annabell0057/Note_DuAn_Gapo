@@ -1,0 +1,81 @@
+feature/manageposts
+git checkout feature/managechatbot
+autotestchatbotmanage01@yopmail.com
+Auto Test Chatbot Manage 01
+Gapo@132
+
+npx playwright test --project=test-hanoiwork-prod-chrome-task-hanoiwork --workers=1 --config=playwright.config.ts --grep "@createStrategicSpearheadProject" --headed
+
+npm run test-task-hanoiwork-prod -- -- --grep "@createProject" --headed
+npm run test-task-gapowork-prod -- -- --grep "@createProject" --headed
+==============================
+New chatbot:
+
+npm run test-chatbot-hanoiwork-prod -- --grep "@Createbasicchatbot" --headed
+npm run test-chatbot-hanoiwork-prod -- test-managechatbot.spec.ts --grep "@Createbasicchatbot" --headed
+
+
+npm run test-chatbot-hanoiwork-prod -- test-managechatbot.spec.ts --grep "@Createbasicchatbot" --headed
+==============================
+npm run test-chatbot-hanoiwork-prod -- test-managechatbot.spec.ts --grep "@Createbasicchatbot" --headed
+
+npm run test-chatbot-hanoiwork-prod -- test-managechatbot.spec.ts --grep "@Editbasicchatbot" --headed
+
+npm run test-chatbot-hanoiwork-prod -- test-managechatbot.spec.ts --grep "@EditCommandChatbot" --headed
+==============================
+chạy test ở gapowork-prod: cho quản lý chatbot
+
+case 1: npm run test-managechatbot-gapowork-prod -- test-managechatbot.spec.ts --grep "@Createbasicchatbot" --headed
+
+case 2: npm run test-managechatbot-gapowork-prod -- test-managechatbot.spec.ts --grep "@Editbasicchatbot" --headed
+
+case 3: npm run test-managechatbot-gapowork-prod -- test-managechatbot.spec.ts --grep "@EditCommandChatbot" --headed
+
+case 4: npm run test-managechatbot-gapowork-prod -- test-managechatbot.spec.ts --grep "@DeleteCommandChatbotBasic" --headed
+
+case 5: npm run test-managechatbot-gapowork-prod -- test-managechatbot.spec.ts --grep "@DeleteChatbotBasic" --headed
+
+case 6: npm run test-managechatbot-gapowork-prod -- test-managechatbot.spec.ts --grep "@CreateChatbotAI" --headed 
+=> đang lỗi
+
+case 7: npm run test-managechatbot-gapowork-prod -- test-managechatbot.spec.ts --grep "@DeleteChatbotAI" --headed
+
+case 11: npm run test-managechatbot-gapowork-prod -- test-managechatbot.spec.ts --grep "@SearchChatbotAllTab" --headed
+
+case 13: npm run test-managechatbot-gapowork-prod -- test-managechatbot.spec.ts --grep "@SearchChatbotInBasicTab" --headed
+
+case 12: npm run test-managechatbot-gapowork-prod -- test-managechatbot.spec.ts --grep "@SearchChatbotInAITab" --headed
+
+case 8: npm run test-managechatbot-gapowork-prod -- test-managechatbot.spec.ts --grep "@ViewListChatbotInAITab" --headed
+
+
+chạy test ở hanoiwork-prodwork-prod: cho quản lý chatbot
+
+case1: npm run test-managechatbot-hanoiwork-prod -- test-managechatbot.spec.ts --grep "@Createbasicchatbot" --headed
+
+case2: npm run test-managechatbot-hanoiwork-prod -- test-managechatbot.spec.ts --grep "@Editbasicchatbot" --headed
+
+case3: npm run test-managechatbot-hanoiwork-prod -- test-managechatbot.spec.ts --grep "@EditCommandChatbot" --headed
+
+ở hanoiwork đang bị lỗi khi sang màn hình mới gõ command thì chưa hiện ra luôn?
+
+case 4: npm run test-managechatbot-hanoiwork-prod -- test-managechatbot.spec.ts --grep "@DeleteCommandChatbotBasic" --headed
+
+case 5: npm run test-managechatbot-hanoiwork-prod -- test-managechatbot.spec.ts --grep "@DeleteChatbotBasic" --headed
+
+case 6: npm run test-managechatbot-hanoiwork-prod -- test-managechatbot.spec.ts --grep "@CreateChatbotAI" --headed 
+đã sửa createChatbotAI, cần chạy lại
+
+case 6 là case đang lỗi ở cả 2 bản
+
+case 7: npm run test-managechatbot-hanoiwork-prod -- test-managechatbot.spec.ts --grep "@DeleteChatbotAI" --headed
+
+case 11: npm run test-managechatbot-hanoiwork-prod -- test-managechatbot.spec.ts --grep "@SearchChatbotAllTab" --headed
+
+case 13: npm run test-managechatbot-hanoiwork-prod -- test-managechatbot.spec.ts --grep "@SearchChatbotInBasicTab" --headed
+
+case 12: npm run test-managechatbot-hanoiwork-prod -- test-managechatbot.spec.ts --grep "@SearchChatbotInAITab" --headed
+===================================================
+managechatbot_account => ws_account
+
+điều tra lỗi cho feature/manageposts ,skip các case lỗi của ticket, điều tra lỗi cho feature/permission,  điều tra lỗi cho feature/task, chạy lại feature/managechatbot

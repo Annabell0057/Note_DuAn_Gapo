@@ -1,0 +1,230 @@
+Feedgroup:
+autotestfeedgroupmanage01@yopmail.com/Gapo@132 / tên: Auto Test Feedgroup Manage 01/ Trên gapo
+
+0900000130/ Gapo@132/ Auto Test Survey 01/ trên Hanoiwork
+
+=> tạo nhánh feature/feedgroup
+
+"test-ticket-gapowork-prod": "cross-env ENV=gapowork-prod playwright test --project=test-gapowork-prod-chrome-ticket --workers=1 --config=playwright.config.ts",
+"test-feedgroup-gapowork-prod": "cross-env ENV=gapowork-prod playwright test --project=test-gapowork-prod-chrome-feedgroup --workers=1 --config=playwright.config.ts",
+?
+case 2: đăng lên mà vẫn hiện là sao?
+
+*test trên gapo:
+case 1: npm run test-feedgroup-gapowork-prod -- test-feedgroup.spec.ts --grep "@CheckPostFollowingGroup" --headed
+case 2: npm run test-feedgroup-gapowork-prod -- test-feedgroup.spec.ts --grep "@CheckPostUnfollowingGroup" --headed
+case 3: npm run test-feedgroup-gapowork-prod -- test-feedgroup.spec.ts --grep "@CheckHiddenPost" --headed
+case 4: npm run test-feedgroup-gapowork-prod -- test-feedgroup.spec.ts --grep "@CheckDeletePost" --headed
+case 5: npm run test-feedgroup-gapowork-prod -- test-feedgroup.spec.ts --grep "@CheckPostAfterLeavingGroup" --headed
+case 6: npm run test-feedgroup-gapowork-prod -- test-feedgroup.spec.ts --grep "@CheckPostAfterRejoiningGroup" --headed
+case 7: npm run test-feedgroup-gapowork-prod -- test-feedgroup.spec.ts --grep "@CheckPostAfterUnfollowingGroup" --headed
+case 8: npm run test-feedgroup-gapowork-prod -- test-feedgroup.spec.ts --grep "@CheckPostAfterFollowingGroup" --headed
+Chạy tổng thể:
+npm run test-feedgroup-gapowork-prod -- --headed
+npm run test-feedgroup-gapowork-prod 
+
+"test-feedgroup-gapowork-prod": "cross-env ENV=gapowork-prod playwright test --project=test-gapowork-prod-chrome-feedgroup --workers=1 --config=playwright.config.ts",
+"test-feedgroup-hanoiwork-prod": "cross-env ENV=hanoiwork-prod playwright test --project=test-hanoiwork-prod-chrome-feedgroup --config=playwright.config.ts --workers=1",
+*test trên hanoiwork:
+case 1: npm run test-feedgroup-hanoiwork-prod -- test-feedgroup.spec.ts --grep "@CheckPostFollowingGroup" --headed
+case 2: npm run test-feedgroup-hanoiwork-prod -- test-feedgroup.spec.ts --grep "@CheckPostUnfollowingGroup" --headed
+case 3: npm run test-feedgroup-hanoiwork-prod -- test-feedgroup.spec.ts --grep "@CheckHiddenPost" --headed
+case 4: npm run test-feedgroup-hanoiwork-prod -- test-feedgroup.spec.ts --grep "@CheckDeletePost" --headed
+case 5: npm run test-feedgroup-hanoiwork-prod -- test-feedgroup.spec.ts --grep "@CheckPostAfterLeavingGroup" --headed
+case 6: npm run test-feedgroup-hanoiwork-prod -- test-feedgroup.spec.ts --grep "@CheckPostAfterRejoiningGroup" --headed
+case 7: npm run test-feedgroup-hanoiwork-prod -- test-feedgroup.spec.ts --grep "@CheckPostAfterUnfollowingGroup" --headed
+case 8: npm run test-feedgroup-hanoiwork-prod -- test-feedgroup.spec.ts --grep "@CheckPostAfterFollowingGroup" --headed
+
+npm run test-feedgroup-hanoiwork-prod -- --headed
+npm run test-feedgroup-hanoiwork-prod
+
+"test-communication-gapowork-prod": "cross-env ENV=gapowork-prod playwright test --config=playwright.config.ts --project=test-gapowork-prod-chrome-chat --project=test-gapowork-prod-chrome-aichatbot --project=test-gapowork-prod-chrome-orgchart --project=test-gapowork-prod-chrome-auth --project=test-gapowork-prod-chrome-feedgroup",
+
+"test-communication-hanoiwork-prod": "cross-env ENV=hanoiwork-prod playwright test --config=playwright.config.ts --project=test-hanoiwork-prod-chrome-chat --project=test-hanoiwork-prod-chrome-aichatbot --project=test-hanoiwork-prod-chrome-feedgroup"
+@CheckDeletePost  @CheckPostAfterUnfollowingGroup
+======================================================================
+profile
+
+gapo:
+autotestprofilemanage01@yopmail.com => Auto Test Profile 01 / (đây là admin) / pass: Gapo@132
+
+autotestprofilemanage02@yopmail.com => Auto Test Profile 02 / (đây là user)  / pass: Gapo@132
+
+=> tạo nhánh feature/profile
+
+case 11: mới cần admin
+case 12:
+
+test-profile.spec.ts
+
+*test trên gapo:
+case 1: npm run test-profile-gapowork-prod -- test-profile.spec.ts --grep "@UpdateAvatar" --headed
+case 2: npm run test-profile-gapowork-prod -- test-profile.spec.ts --grep "@UpdateCover" --headed
+case 3: npm run test-profile-gapowork-prod -- test-profile.spec.ts --grep "@ViewAllPic" --headed
+ở case này xác nhận với chị Vân việc "View detail được từng ảnh" chỉ cần click vào 1 ảnh và view được lên là được
+case 5: npm run test-profile-gapowork-prod -- test-profile.spec.ts --grep "@ViewListFollowing" --headed
+case 6: npm run test-profile-gapowork-prod -- test-profile.spec.ts --grep "@ViewListFollowers" --headed
+case 7: npm run test-profile-gapowork-prod -- test-profile.spec.ts --grep "@UsersEditPersonalInformation " --headed
+case 8: npm run test-profile-gapowork-prod -- test-profile.spec.ts --grep "@UsersEditContactInformation" --headed
+case 9: npm run test-profile-gapowork-prod -- test-profile.spec.ts --grep "@UsersEditJobInformation" --headed
+case 10: npm run test-profile-gapowork-prod -- test-profile.spec.ts --grep "@UsersEditAdditionalInformation" --headed
+case 11: npm run test-profile-gapowork-prod -- test-profile.spec.ts --grep "@ToggleAdditionalInformation" --headed
+case 12: npm run test-profile-gapowork-prod -- test-profile.spec.ts --grep "@CheckProfileWhenSwitchingWorkspaces" --headed
+npm run test-profile-gapowork-prod
+chỉ cần test
+- Vị trí công việc
+- Tên ws
+- Ngày sinh
+
+nếu như vậy thì có cần test theo 2 TH sau:
+
+tại ws A, check bật (- Vị trí công việc
+- Tên ws
+- Ngày sinh)
+tại ws B, check bật (- Vị trí công việc
+- Tên ws
+- Ngày sinh)
+
+do tắt ở case 11 rồi k cần check nữa
+
+ws id: 585545636536255 tên: Trang auto test
+admin id: 613847098 tên: Admin Auto Test 01
+
+"test-profile-hanoiwork-prod": "cross-env ENV=hanoiwork-prod playwright test --project=test-hanoiwork-prod-chrome-profile --config=playwright.config.ts --workers=1",
+Chạy tổng thể:
+npm run test-profile-gapowork-prod -- --headed
+npm run test-profile-gapowork-prod
+
+*test trên hanoiwork:
+0900002001 => Auto Test Profile 01 / (đây là admin) / pass: Gapo@132
+0900002002 => Auto Test Profile 02 / (đây là user) / pass: Gapo@132
+
+autotestprofilemanage02@yopmail.com => Auto Test Profile 02 / (đây là user)  / pass: Gapo@132
+
+"test-profile-hanoiwork-prod": "cross-env ENV=hanoiwork-prod playwright test --project=test-hanoiwork-prod-chrome-profile --config=playwright.config.ts --workers=1",
+
+
+case 1: npm run test-profile-hanoiwork-prod -- test-profile.spec.ts --grep "@UpdateAvatar" --headed
+chỉ cần xác nhận nó thay đổi so với trước đó là đc
+case 2: npm run test-profile-hanoiwork-prod -- test-profile.spec.ts --grep "@UpdateCover" --headed
+chỉ cần xác nhận nó thay đổi so với trước đó là đc
+case 3: npm run test-profile-hanoiwork-prod -- test-profile.spec.ts --grep "@ViewAllPic" --headed
+ở case này xác nhận với chị Vân việc "View detail được từng ảnh" chỉ cần click vào 1 ảnh và view được lên là được
+case 5: npm run test-profile-hanoiwork-prod -- test-profile.spec.ts --grep "@ViewListFollowing" --headed
+case 6: npm run test-profile-hanoiwork-prod -- test-profile.spec.ts --grep "@ViewListFollowers" --headed
+case 7: npm run test-profile-hanoiwork-prod -- test-profile.spec.ts --grep "@UsersEditPersonalInformation " --headed
+code chưa tối ưu ở clickEditPersonalInformation
+case 8: npm run test-profile-hanoiwork-prod -- test-profile.spec.ts --grep "@UsersEditContactInformation" --headed
+case 9: npm run test-profile-hanoiwork-prod -- test-profile.spec.ts --grep "@UsersEditJobInformation" --headed
+case 10: npm run test-profile-hanoiwork-prod -- test-profile.spec.ts --grep "@UsersEditAdditionalInformation" --headed
+case 11: npm run test-profile-hanoiwork-prod -- test-profile.spec.ts --grep "@ToggleAdditionalInformation" --headed
+case 12: npm run test-profile-hanoiwork-prod -- test-profile.spec.ts --grep "@CheckProfileWhenSwitchingWorkspaces" --headed
+
+npm run test-profile-hanoiwork-prod -- --headed
+npm run test-profile-hanoiwork-prod
+=========================================================================================================================
+fix bug aichatbot
+nhánh feature/aichatbot
+npm run test-aichatbot-gapowork-prod -- test-aichatbot.spec.ts --grep "@vanto" --headed
+
+npm run test-aichatbot-gapowork-prod -- test-aichatbot.spec.ts --grep "@botcustom" --headed
+
+npm run test-aichatbot-hanoiwork-prod -- test-aichatbot.spec.ts --grep "@botcustom" --headed
+
+npm run test-aichatbot-hanoiwork-prod -- test-aichatbot.spec.ts --grep "@magicword" --headed
+
+npm run test-aichatbot-gapowork-prod -- test-aichatbot.spec.ts --grep "@magicword" --headed
+
+npm run test-aichatbot-beta -- test-aichatbot.spec.ts --grep "@magicword" --headed
+
+npm run test-aichatbot-hanoiwork-prod -- --headed
+
+npm run test-aichatbot-gapowork-prod -- --headed
+
+aichatbot trên gapo: k xoá đc chatbot nên mới gây lỗi
+==========================================================================================================================
+fix bug permission
+nhánh feature/permission
+git checkout feature/permission
+npm run test-permission-hanoiwork-prod -- test-permission.spec.ts --grep "@endorsemanagement Endorse Management Roles " --headed
+npm run test-permission-gapowork-prod -- test-permission.spec.ts --grep "@endorsemanagement Endorse Management Roles " --headed
+
+nhánh feature/permission : HNW ok, gapo đang lỗi
+
+==========================================================================================================================
+fix bug feature/workspace => bổ sung profile
+
+==========================================================================================================================
+git checkout feature/ticket
+npm run test-ticket-gapowork-prod -- test-ticket.spec.ts --grep "@CreateRequestWithRequiredFieldsAndApprove Create Request With Required Fields And Approve" --headed
+==========================================================================================================================
+*tóm tắt lỗi trên gapo:
+
+test-calendar.spec.ts
+npm run test-calendar-gapowork-prod -- test-calendar.spec.ts --grep "@create-normal-room Create normal room" --headed
+npm run test-calendar-gapowork-prod -- test-calendar.spec.ts --grep "@create-approval-room Create approval room" --headed
+npm run test-calendar-gapowork-prod -- test-calendar.spec.ts --grep "@create-limited-room Create limited room" --headed
+npm run test-calendar-gapowork-prod -- test-calendar.spec.ts --grep "@booking-normal-room Booking normal room successfully" --headed
+=> pass tất cả
+
+test-manageposts.spec.ts 
+git checkout feature/manageposts
+npm run test-manageposts-gapowork-prod -- test-manageposts.spec.ts --grep "@filterByDate Verify chart filter by date" --headed
+npm run test-manageposts-gapowork-prod -- test-manageposts.spec.ts --grep "@filterByPersonalPosts Verify chart filter by Personal Posts" --headed
+npm run test-manageposts-gapowork-prod -- test-manageposts.spec.ts --grep "@filterByGroupPosts Verify chart filter by Group Posts" --headed
+npm run test-manageposts-gapowork-prod -- test-manageposts.spec.ts --grep "@filterByPollvote Verify chart filter by Pollvote" --headed
+npm run test-manageposts-gapowork-prod -- test-manageposts.spec.ts --grep "@filterByAcknowledge Verify chart filter by Acknowledge" --headed
+npm run test-manageposts-gapowork-prod -- test-manageposts.spec.ts --grep "@filterByHashtagPosts Verify chart filter by Hashtag Posts" --headed
+npm run test-manageposts-gapowork-prod -- test-manageposts.spec.ts --grep "@filterByLivestreamPosts Verify chart filter by Livestream Posts" --headed
+npm run test-manageposts-gapowork-prod -- test-manageposts.spec.ts --grep "@filterByHashtag Verify chart filter by Hashtag" --headed
+npm run test-manageposts-gapowork-prod -- test-manageposts.spec.ts --grep "@verifyFeauturedPosts Verify Featured Posts" --headed
+npm run test-manageposts-gapowork-prod -- test-manageposts.spec.ts --grep "@viewPost Verify view post" --headed
+npm run test-manageposts-gapowork-prod -- test-manageposts.spec.ts --grep "@deletePost Verify delete post" --headed
+npm run test-manageposts-hanoiwork-prod -- test-manageposts.spec.ts --grep "@deletePost Verify delete post" --headed
+npm run test-manageposts-gapowork-prod -- --headed
+npm run test-manageposts-hanoiwork-prod -- --headed
+=>tất cả lỗi trên đều đc báo chung 1 lỗi (đã sửa xong)
+
+test-aichatbot.spec.ts
+npm run test-aichatbot-gapowork-prod -- test-aichatbot.spec.ts --grep "@magicword verify Gavin Tin tức hot hôm nay" --headed
+=> lỗi
+npm run test-aichatbot-gapowork-prod -- test-aichatbot.spec.ts --grep "@botpermission verify Permission valid prompt" --headed
+=> pass
+cả 2 đều đáng báo lỗi ở nhóm E2E
+> 115 |   let otp = authenticator.generate(secretLocal);
+      |                           ^
+  116 |   console.log("➡️  OTP generated from config SecretKey:", otp);
+  
+  
+test-permission.spec.ts
+npm run test-permission-gapowork-prod -- test-permission.spec.ts --grep "@endorsemanagement Endorse Management Roles" --headed
+=> pass
+
+test-task.spec.ts
+npm run test-task-gapowork-prod -- test-task.spec.ts --grep "@createSubtask Create new subtask" --headed
+npm run test-task-hanoiwork-prod -- test-task.spec.ts --grep "@createSubtask Create new subtask" --headed
+npm run test-task-hanoiwork-prod -- test-task.spec.ts --grep "@createSubtask Create new subtask" --headed
+"project_name": "Project Automation 20",
+"search_keyword_list": ["Auto Test Task 02", "Auto Test Task 03"]
+"task_list_name": "Auto DSCV 1",
+=> lỗi
+
+test-ticket.spec.ts
+npm run test-ticket-gapowork-prod -- test-ticket.spec.ts --grep "@CreateRequestWithRequiredFieldsAndSendNotiChatbot Create Request With Required Fields And Send Noti Chatbot" --headed
+=> lỗi
+
+    if (ENV.includes("gapowork")) {
+      test.skip(true, "Bỏ qua case này trên môi trường Gapo");
+    }
+
+test.skip(ENV.includes("gapowork"), "Bỏ qua case này trên môi trường Gapo");
+
+@CreateRequestWithRequiredFieldsAndApprove Create Request With Required Fields And Approve
+@CreateRequestWithNoRequiredFieldsAndApprove Create Request With No Required Fields And Approve
+@CreateRequestAndAdditionalRequest Create Request And Additional Request
+@CreateAndReserveRequest Create And Reserve Request
+@ApproverEditContent Approver Edit Content
+@ApproverSpamRequest Approver Spam Request
+@CreateRequestWithRequiredFieldsAndSendNotiChatbot Create Request With Required Fields And Send Noti Chatbot
+===========================
+My account test trên Gapo: mytest1@yopmail.com /pass: Gapo@132
