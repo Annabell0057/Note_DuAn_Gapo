@@ -225,6 +225,6 @@ test.skip(ENV.includes("gapowork"), "Bỏ qua case này trên môi trường Gap
 @CreateAndReserveRequest Create And Reserve Request
 @ApproverEditContent Approver Edit Content
 @ApproverSpamRequest Approver Spam Request
-@CreateRequestWithRequiredFieldsAndSendNotiChatbot Create Request With Required Fields And Send Noti Chatbot
+
 ===========================
 My account test trên Gapo: mytest1@yopmail.com /pass: Gapo@132
