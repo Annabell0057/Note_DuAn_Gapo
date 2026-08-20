@@ -229,7 +229,10 @@ test.skip(ENV.includes("gapowork"), "Bỏ qua case này trên môi trường Gap
 @CreateAndReserveRequest Create And Reserve Request
 @ApproverEditContent Approver Edit Content
 @ApproverSpamRequest Approver Spam Request
+<<<<<<< HEAD
 @CreateRequestWithRequiredFieldsAndSendNotiChatbot Create Request With Required Fields And Send Noti Chatbot
+=======
+>>>>>>> ece5f198586c80f7b6bc089b8a80b3cf9372117b
 
 ===========================
 tóm tắt lỗi trên gapo (lần 2)
