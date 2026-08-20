@@ -1,4 +1,5 @@
 Feedgroup:
+git checkout feature/feedgroup
 autotestfeedgroupmanage01@yopmail.com/Gapo@132 / tên: Auto Test Feedgroup Manage 01/ Trên gapo
 
 0900000130/ Gapo@132/ Auto Test Survey 01/ trên Hanoiwork
@@ -200,14 +201,17 @@ test-permission.spec.ts
 npm run test-permission-gapowork-prod -- test-permission.spec.ts --grep "@endorsemanagement Endorse Management Roles" --headed
 => pass
 
+git checkout feature/task
 test-task.spec.ts
 npm run test-task-gapowork-prod -- test-task.spec.ts --grep "@createSubtask Create new subtask" --headed
 npm run test-task-hanoiwork-prod -- test-task.spec.ts --grep "@createSubtask Create new subtask" --headed
 npm run test-task-hanoiwork-prod -- test-task.spec.ts --grep "@createSubtask Create new subtask" --headed
+npm run test-task-gapowork-prod -- test-task.spec.ts --grep "@collabTaskEdit Edit task in collab" --headed
 "project_name": "Project Automation 20",
 "search_keyword_list": ["Auto Test Task 02", "Auto Test Task 03"]
 "task_list_name": "Auto DSCV 1",
 => lỗi
+
 
 test-ticket.spec.ts
 npm run test-ticket-gapowork-prod -- test-ticket.spec.ts --grep "@CreateRequestWithRequiredFieldsAndSendNotiChatbot Create Request With Required Fields And Send Noti Chatbot" --headed
@@ -226,5 +230,87 @@ test.skip(ENV.includes("gapowork"), "Bỏ qua case này trên môi trường Gap
 @ApproverEditContent Approver Edit Content
 @ApproverSpamRequest Approver Spam Request
 @CreateRequestWithRequiredFieldsAndSendNotiChatbot Create Request With Required Fields And Send Noti Chatbot
+
 ===========================
-My account test trên Gapo: mytest1@yopmail.com /pass: Gapo@132
+tóm tắt lỗi trên gapo (lần 2)
+git checkout feature/auth (done)
+test-auth.spec.ts
+npm run test-auth-gapowork-prod -- test-auth.spec.ts --grep "@loginbyemail login by email successfully" --headed
+
+npm run test-auth-hanoiwork-prod -- test-auth.spec.ts --grep "@loginbyemail login by email successfully" --headed
+
+
+test-acknowledge.spec.ts:444 (done)
+case 17: npm run test-acknowledge-gapowork-prod -- test-acknowledge.spec.ts --grep "@CheckRankingList Check Ranking List" --headed (done)
+case 18: npm run test-acknowledge-gapowork-prod -- test-acknowledge.spec.ts --grep "@CheckRankingList Check Ranking List" --headed
+npm run test-acknowledge-gapowork-prod -- test-acknowledge.spec.ts --grep "@FilterTime Filter Time" --headed (done)
+npm run test-acknowledge-gapowork-prod -- test-acknowledge.spec.ts --grep "@FilterByTime Filter By Time" --headed (done)
+npm run test-acknowledge-gapowork-prod -- test-acknowledge.spec.ts --grep "@FilterByDepartment Filter By Department" --headed
+
+npm run test-acknowledge-gapowork-prod -- --headed
+  "acknowledge_account": {
+    "email": "autotestacknowledge01@yopmail.com",
+    "password": "Gapo@132"
+  },
+  
+test-task.spec.ts (Chưa làm)
+npm run test-task-gapowork-prod -- test-task.spec.ts --grep "@collabTaskEdit Edit task in collab" --headed
+
+test-workspace.spec.ts:383 (đang điều tra dở)
+npm run test-workspace-gapowork-prod -- test-workspace.spec.ts --grep "@addnewuser add new user" --headed
+===========================
+tóm tắt lỗi trên HNW (lần 2)
+
+*report-discovery:
+git checkout feature/acknowledge
+test-acknowledge.spec.ts:444 (done)
+case 17: npm run test-acknowledge-hanoiwork-prod -- test-acknowledge.spec.ts --grep "@CheckRankingList Check Ranking List" --headed (done)
+case 18: npm run test-acknowledge-hanoiwork-prod -- test-acknowledge.spec.ts --grep "@CheckRankingList Check Ranking List" --headed
+npm run test-acknowledge-hanoiwork-prod -- test-acknowledge.spec.ts --grep "@FilterTime Filter Time" --headed (done)
+npm run test-acknowledge-hanoiwork-prod -- test-acknowledge.spec.ts --grep "@FilterByTime Filter By Time" --headed (done)
+npm run test-acknowledge-hanoiwork-prod -- test-acknowledge.spec.ts --grep "@FilterByDepartment Filter By Department" --headed
+
+npm run test-acknowledge-hanoiwork-prod -- test-acknowledge.spec.ts --grep "@EditSpecialMedal Edit Special Medal" --headed (done)
+npm run test-acknowledge-hanoiwork-prod -- test-acknowledge.spec.ts --grep "@DeleteSpecialMedal Delete Special Medal" --headed (done)
+npm run test-acknowledge-hanoiwork-prod -- test-acknowledge.spec.ts --grep "@SearchMember Search Member" --headed (done)
+
+npm run test-acknowledge-gapowork-prod -- test-acknowledge.spec.ts --grep "@SearchMember Search Member" --headed (done)
+
+git checkout feature/survey
+test-survey.spec.ts:359
+npm run test-survey-hanoiwork-prod -- test-survey.spec.ts --grep "@createAnswerSurveyFromJsonData create and answer survey from json data" --headed (code dev đang lỗi => skip)
+
+
+*productivity:
+git checkout feature/approval
+test-approval.spec.ts
+npm run test-approval-hanoiwork-prod -- test-approval.spec.ts --grep "@createApproval Create approval" --headed (xác nhận với Minh => đã xong)
+
+test-orgchart.spec.ts:77
+npm run test-orgchart-hanoiwork-prod -- test-orgchart.spec.ts --grep "@adduserto2department add user to two department" --headed
+
+test-search.spec.ts:53
+npm run test-search-hanoiwork-prod -- test-search.spec.ts --grep "@searchbyname search by valid "Bảo Chi"" --headed
+
+*content:
+git checkout feature/comment-post
+test-comment-post.spec.ts:148
+npm run test-comment-post-hanoiwork-prod -- test-comment-post.spec.ts --grep "@deletecomment delete comment" --headed
+
+npm run test-comment-post-hanoiwork-prod -- test-comment-post.spec.ts --grep "@editcommentaddfile edit comment by adding file" --headed
+
+*communication
+test-aichatbot.spec.ts
+npm run test-aichatbot-hanoiwork-prod -- test-aichatbot.spec.ts --grep "@magicword verify HanoiWork AI Kết nối luật sư tư vấn cho tôi về luật lao động" --headed
+
+npm run test-aichatbot-hanoiwork-prod -- test-aichatbot.spec.ts --grep "@botdocument verify Document Nguyên tắc kiểm thử" --headed
+
+===========================
+Gapo (lần 3)
+
+git checkout feature/task
+test-task.spec.ts
+npm run test-task-gapowork-prod -- test-task.spec.ts --grep "@collabTaskEdit Edit task in collab" --headed
+
+===========================
+My account test trên Gapo: mytest1@yopmail.com /pass: Gapo@132/ VJIC6WUEUFK5O4CH5ZW72Y5VKBNCI6Z666D3B2CF6VV4A6NEOUIQ
