@@ -314,6 +314,39 @@ npm run test-task-gapowork-prod -- test-task.spec.ts --grep "@collabTaskEdit Edi
 npm run test-task-gapowork-prod -- test-task.spec.ts --grep "@collabTaskCreate Create task in collab" --headed
 
 npm run test-task-hanoiwork-prod -- test-task.spec.ts --grep "@collabTaskCreate Create task in collab" --headed
+===========================
+HNW lần 4
+
+*collaboration
+git checkout feature/manageposts
+test-manageposts.spec.ts:216
+npm run test-manageposts-hanoiwork-prod -- test-manageposts.spec.ts --grep "@deletePost Verify delete post" --headed
+npm run test-manageposts-gapowork-prod -- test-manageposts.spec.ts --grep "@deletePost Verify delete post" --headed
+=> lỗi này a Tuấn đã fix
+
+*content
+git checkout feature/comment-post
+test-comment-post.spec.ts:174
+npm run test-comment-post-hanoiwork-prod -- test-comment-post.spec.ts --grep "@deletecomment delete comment" --headed
+=> chạy local thì pass, còn lên CICD thì đang k chạy đc nên để tạm ở đó
+
+git checkout feature/permission
+test-permission.spec.ts:805
+npm run test-permission-hanoiwork-prod -- test-permission.spec.ts --grep "@violationmanagement Violation Management Roles" --headed
+=> đã sửa xong (nguyên nhân do test data bị cũ, đã tạo lại testdata)
+
+*discovery
+git checkout feature/survey
+test-survey.spec.ts:90 
+npm run test-survey-hanoiwork-prod -- test-survey.spec.ts --grep "@createsurvey no deadline" --headed
+npm run test-survey-gapowork-prod -- test-survey.spec.ts --grep "@createsurvey no deadline" --headed
+=> đã hỏi anh Hoàn nhờ a Hoàn xử lý
+
+npm run test-survey-hanoiwork-prod -- test-survey.spec.ts --grep "@editSurvey change type" --headed
+=> đang lỗi
+
+git checkout feature/miniapp
+npm run test-survey-gapowork-prod -- test-survey.spec.ts --grep "@editSurvey change type" --headed
 
 ===========================
 My account test trên Gapo: mytest1@yopmail.com /pass: Gapo@132/ VJIC6WUEUFK5O4CH5ZW72Y5VKBNCI6Z666D3B2CF6VV4A6NEOUIQ
