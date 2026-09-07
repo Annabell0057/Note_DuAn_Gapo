@@ -340,10 +340,12 @@ git checkout feature/survey
 test-survey.spec.ts:90 
 npm run test-survey-hanoiwork-prod -- test-survey.spec.ts --grep "@createsurvey no deadline" --headed
 npm run test-survey-gapowork-prod -- test-survey.spec.ts --grep "@createsurvey no deadline" --headed
+@createsurvey no deadline + @createsurveyWithDeadline with deadline + @createsurveyRecurring recurring survey
 => đã hỏi anh Hoàn nhờ a Hoàn xử lý
 
-npm run test-survey-hanoiwork-prod -- test-survey.spec.ts --grep "@editSurvey change type" --headed
-=> đang lỗi
+npm run test-survey-hanoiwork-prod -- test-survey.spec.ts --grep "@editSurvey change type" --headed 
+npm run test-survey-gapowork-prod -- test-survey.spec.ts --grep "@editSurvey change type" --headed => k lỗi
+=> đang lỗi ở hnw do code BE (phân công nhờ a Hoàn xử lý)
 
 git checkout feature/miniapp
 npm run test-survey-gapowork-prod -- test-survey.spec.ts --grep "@editSurvey change type" --headed
