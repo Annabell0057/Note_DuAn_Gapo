@@ -349,6 +349,83 @@ npm run test-survey-gapowork-prod -- test-survey.spec.ts --grep "@editSurvey cha
 
 git checkout feature/miniapp
 npm run test-survey-gapowork-prod -- test-survey.spec.ts --grep "@editSurvey change type" --headed
+===========================
+Test hạ tầng viettel:
+*collaboration:
+feedgroup OK
+
+test-manageposts.spec.ts:121
+npm run test-manageposts-hanoiwork-prod -- test-manageposts.spec.ts --grep "@filterByDate Verify chart filter by date" --headed
+npm run test-manageposts-gapowork-prod -- test-manageposts.spec.ts --grep "@filterByDate Verify chart filter by date" --headed
+
+npm run test-manageposts-hanoiwork-prod -- test-manageposts.spec.ts --grep "@filterByPersonalPosts Verify chart filter by Personal Posts" --headed
+=> Lọc bài viết đang bị lọc sai nên tất cả các case đều đang bị lỗi (nhờ a Tuấn fix)
+
+test-managegroups.spec.ts:81
+npm run test-managegroups-hanoiwork-prod -- test-managegroups.spec.ts --grep "@totalgroups Verify total groups > 0" --headed
+npm run test-managegroups-hanoiwork-prod -- test-managegroups.spec.ts --grep "@filterbydaterange Filter by date range" --headed
+npm run test-managegroups-hanoiwork-prod -- test-managegroups.spec.ts --grep "@sortrecent Sort recently post by date (ASC or DESC)" --headed
+npm run test-managegroups-hanoiwork-prod -- test-managegroups.spec.ts --grep "@sortpostscount" --headed
+npm run test-managegroups-hanoiwork-prod -- test-managegroups.spec.ts --grep "@sortcomments" --headed
+npm run test-managegroups-hanoiwork-prod -- test-managegroups.spec.ts --grep "@sortreactions" --headed
+
+*communication:
+
+test-aichatbot.spec.ts:120
+npm run test-aichatbot-hanoiwork-prod -- test-aichatbot.spec.ts --grep "@magicword" --headed
+=> pending tất cả đợi Duy xử lý
+
+*content:
+
+test-permission.spec.ts:805
+git checkout feature/permission
+npm run test-permission-hanoiwork-prod -- test-permission.spec.ts --grep "@vieworganizationalreport" --headed
+Verify số tất cả thành viên > 0
+Verify số lượng đã kích hoạt >0
+Verify số lượng chưa kích hoạt >0 
+Verify số lượng thành viên hoạt động >0
+Verify số lượng thành viên sử dụng tính năng >0 
+
+npm run test-permission-hanoiwork-prod -- test-permission.spec.ts --grep "@postmanagement" --headed  => quản lý bài viết (đã nhờ a Tuấn fix)
+
+npm run test-permission-hanoiwork-prod -- test-permission.spec.ts --grep "@groupmanagement" --headed => đang pass ở local
+npm run test-permission-hanoiwork-prod -- test-permission.spec.ts --grep "@violationmanagement" --headed => đang pass ở local
+
+=> HNW trỏ sang viettel đang lỗi (sau sẽ sửa code để nó lọc theo hiện tại, còn h sẽ chạy tiếp)
+
+test-newsfeed.spec.ts:74
+npm run test-newsfeed-hanoiwork-prod -- test-newsfeed.spec.ts --grep "@displayannouce annoucement post" --headed  => local đang pass
+
+npm run test-newsfeed-hanoiwork-prod -- test-newsfeed.spec.ts --grep "@viewlistannounce announcement post" --headed  => local đang pass
+
+*discovery:
+
+test-survey.spec.ts:90
+npm run test-survey-hanoiwork-prod -- test-survey.spec.ts --grep "@createsurvey no deadline" --headed => lỗi cũ của a Hoàn
+npm run test-survey-hanoiwork-prod -- test-survey.spec.ts --grep "@editSurvey change type" --headed => local pass
+
+test-acknowledge.spec.ts:228
+git checkout feature/acknowledge
+npm run test-acknowledge-hanoiwork-prod -- test-acknowledge.spec.ts --grep "@PreviewSpecialMedal Preview Special Medal" --headed => đã fix xong
+npm run test-acknowledge-hanoiwork-prod -- test-acknowledge.spec.ts --grep "@EditSpecialMedal Edit Special Medal" --headed => local pass
+
+test-.spec.ts:136
+npm run test-profile-hanoiwork-prod -- test-profile.spec.ts --grep "@ViewListFollowing" --headed => local pass
+npm run test-profile-hanoiwork-prod -- test-profile.spec.ts --grep "@ViewListFollowers" --headed => local pass
+
+test-miniapp.spec.ts:192
+npm run test-miniapp-hanoiwork-prod -- test-miniapp.spec.ts --grep "@CannotEdit default Mini App" --headed
+=> phải vào cms tạo ws mới xem có lỗi k? (pending lại lần sau check)
+
+*productivity:
+
+git checkout feature/approval
+test-approval.spec.ts:846:
+npm run test-approval-hanoiwork-prod -- test-approval.spec.ts --grep "@filterApprovalRequests Filter approval requests" --headed
+=> đã fix pass ở local, đang đẩy lên CI CD để xem có lỗi k
+
+test-orgchart.spec.ts:397
+npm run test-orgchart-hanoiwork-prod -- test-orgchart.spec.ts --grep "@adduserto2department add user to two department" --headed
 
 ===========================
 My account test trên Gapo: mytest1@yopmail.com /pass: Gapo@132/ VJIC6WUEUFK5O4CH5ZW72Y5VKBNCI6Z666D3B2CF6VV4A6NEOUIQ
