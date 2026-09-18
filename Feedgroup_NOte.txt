@@ -426,6 +426,81 @@ npm run test-approval-hanoiwork-prod -- test-approval.spec.ts --grep "@filterApp
 
 test-orgchart.spec.ts:397
 npm run test-orgchart-hanoiwork-prod -- test-orgchart.spec.ts --grep "@adduserto2department add user to two department" --headed
+=> pass ở local done
+===========================
+Test hạ tầng viettel 2:
+
+Lỗi ở full quản lý nhóm, quản lý bài viết, group tests
+*calendar:
+
+git checkout feature/calendar
+test-calendar.spec.ts
+npm run test-calendar-hanoiwork-prod -- test-calendar.spec.ts --grep "@create-single Create single event successfully" --headed
+
+git checkout feature/group
+test-group.spec.ts
+npm run test-group-hanoiwork-prod -- test-group.spec.ts --grep "@removeGroup Remove member from group" --headed
+npm run test-group-gapowork-prod -- test-group.spec.ts --grep "@removeGroup Remove member from group" --headed
+
+npm run test-group-hanoiwork-prod -- test-group.spec.ts --grep "@requestedGroup requested to join this group" --headed => done
+npm run test-group-hanoiwork-prod -- test-group.spec.ts --grep "@updateViewGroup Update View of group" --headed => local pass
+
+npm run test-group-hanoiwork-prod -- test-group.spec.ts --grep "@inviteMember Invite member" --headed => done
+npm run test-group-gapowork-prod -- test-group.spec.ts --grep "@inviteMember Invite member" --headed => done
+
+npm run test-group-hanoiwork-prod -- test-group.spec.ts --grep "@inviteDepartment Invite member via department" --headed
+npm run test-group-gapowork-prod -- test-group.spec.ts --grep "@inviteDepartment Invite member via department" --headed
+
+npm run test-group-hanoiwork-prod -- test-group.spec.ts --grep "@inviteRole Invite member via role" --headed
+npm run test-group-gapowork-prod -- test-group.spec.ts --grep "@inviteRole Invite member via role" --headed
+
+npm run test-group-hanoiwork-prod
+npm run test-group-gapowork-prod
+
+  4 failed
+    [test-hanoiwork-prod-chrome-group] › tests\test-group.spec.ts:407:7 › Group Tests › @updateViewGroup Update View of group 
+    [test-hanoiwork-prod-chrome-group] › tests\test-group.spec.ts:442:7 › Group Tests › @inviteMember Invite member 
+    [test-hanoiwork-prod-chrome-group] › tests\test-group.spec.ts:455:7 › Group Tests › @inviteDepartment Invite member via department 
+    [test-hanoiwork-prod-chrome-group] › tests\test-group.spec.ts:479:7 › Group Tests › @inviteRole Invite member via role 
+
+git checkout feature/workspace
+test-workspace.spec.ts
+npm run test-workspace-hanoiwork-prod -- test-workspace.spec.ts --grep "@edituserinfo edit user infor" --headed
+npm run test-workspace-gapowork-prod -- test-workspace.spec.ts --grep "@edituserinfo edit user infor" --headed
+npm run test-workspace-gapowork-prod
+
+*content:
+test-permission.spec.ts:496
+npm run test-permission-hanoiwork-prod -- test-permission.spec.ts --grep "@groupmanagement Group Management Roles" --headed => pass ở local
+npm run test-permission-hanoiwork-prod -- test-permission.spec.ts --grep "@postmanagement Post Management Roles" --headed => vẫn lỗi cũ bên a Thanh Tuấn
+
+git checkout feature/hashtag
+test-hashtag.spec.ts:109:
+npm run test-hashtag-hanoiwork-prod -- test-hashtag.spec.ts --grep "@edithashtag Edit hashtag post" --headed => đã sửa done
+npm run test-hashtag-gapowork-prod -- test-hashtag.spec.ts --grep "@edithashtag Edit hashtag post" --headed => đã sửa done
+
+npm run test-hashtag-hanoiwork-prod -- test-hashtag.spec.ts --grep "@editaddhashtag Edit add hashtag post" --headed => sửa trên nên code này đc ăn theo r
+npm run test-hashtag-hanoiwork-prod
+
+*discovery
+
+git checkout feature/acknowledge
+test-acknowledge.spec.ts:243
+npm run test-acknowledge-hanoiwork-prod -- test-acknowledge.spec.ts --grep "@EditSpecialMedal Edit Special Medal" --headed => local pass
+npm run test-acknowledge-hanoiwork-prod -- test-acknowledge.spec.ts --grep "@EditNormalMedal Edit Normal Medal" --headed => local pass
+
+npm run test-acknowledge-hanoiwork-prod -- test-acknowledge.spec.ts --grep "@PreviewSpecialMedal Preview Special Medal" --headed
+npm run test-acknowledge-gapowork-prod -- test-acknowledge.spec.ts --grep "@PreviewSpecialMedal Preview Special Medal" --headed
+
+npm run test-acknowledge-hanoiwork-prod
+
+git checkout feature/survey
+test-survey.spec.ts:359
+npm run test-survey-hanoiwork-prod -- test-survey.spec.ts --grep "@createAnswerSurveyFromJsonData create and answer survey from json data" --headed 
+
+git checkout feature/hanoiwork_miniapp
+test-miniapp.spec.ts:192
+npm run test-miniapp-hanoiwork-prod -- test-miniapp.spec.ts --grep "@CannotEdit default Mini App" --headed
 
 ===========================
 My account test trên Gapo: mytest1@yopmail.com /pass: Gapo@132/ VJIC6WUEUFK5O4CH5ZW72Y5VKBNCI6Z666D3B2CF6VV4A6NEOUIQ
