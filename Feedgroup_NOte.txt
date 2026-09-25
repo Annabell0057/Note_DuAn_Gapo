@@ -500,7 +500,59 @@ npm run test-survey-hanoiwork-prod -- test-survey.spec.ts --grep "@createAnswerS
 
 git checkout feature/hanoiwork_miniapp
 test-miniapp.spec.ts:192
-npm run test-miniapp-hanoiwork-prod -- test-miniapp.spec.ts --grep "@CannotEdit default Mini App" --headed
+npm run test-miniapp-hanoiwork-prod -- test-miniapp.spec.ts --grep "@CannotEdit default Mini App" --headed => "Quản lý văn bản nội bộ" chỉ ở data của khách nên skip case này
+===========================
+*calendar:
+
+git checkout feature/calendar
+test-calendar.spec.ts
+npm run test-calendar-hanoiwork-prod -- test-calendar.spec.ts --grep "@edit-single Edit single event successfully" --headed
+npm run test-calendar-gapowork-prod -- test-calendar.spec.ts --grep "@edit-single Edit single event successfully" --headed
+
+npm run test-calendar-hanoiwork-prod -- test-calendar.spec.ts --grep "@edit-single-to-repeat Edit single event to repeat event successfully" --headed
+npm run test-calendar-gapowork-prod -- test-calendar.spec.ts --grep "@edit-single-to-repeat Edit single event to repeat event successfully" --headed
+
+*collaboration:
+
+git checkout feature/calendar
+test-manageposts.spec.ts:157
+npm run test-manageposts-hanoiwork-prod -- test-manageposts.spec.ts --grep "@filterByHashtagPosts Verify chart filter by Hashtag Posts" --headed => đã sửa data và pass
+npm run test-manageposts-hanoiwork-prod -- test-manageposts.spec.ts --grep "@filterByHashtag Verify chart filter by Hashtag" --headed => đã sửa data và pass
+
+git checkout feature/feedgroup
+test-feedgroup.spec.ts:267
+npm run test-feedgroup-hanoiwork-prod -- test-feedgroup.spec.ts --grep "@CheckPostAfterUnfollowingGroup" --headed => pass ở local (nên thử đưa lên CI CD xem)
+
+*content:
+test-post.spec.ts:182
+npm run test-post-hanoiwork-prod -- test-post.spec.ts --grep "@editposttext" --headed => pass ở local
+
+git checkout feature/hashtag
+test-hashtag.spec.ts:109
+npm run test-hashtag-hanoiwork-prod -- test-hashtag.spec.ts --grep "@editaddhashtag Edit add hashtag post" --headed => sửa trên nên code này đc ăn theo r
+npm run test-hashtag-hanoiwork-prod -- test-hashtag.spec.ts --grep "@edithashtag Edit hashtag post" --headed
+npm run test-hashtag-hanoiwork-prod
+
+*ticket:
+
+git checkout feature/ticket
+test-ticket.spec.ts:745
+npm run test-ticket-hanoiwork-prod -- test-ticket.spec.ts --grep "@CreateRequestWithRequiredFieldsAndApprove" --headed => done
+npm run test-ticket-hanoiwork-prod -- test-ticket.spec.ts --grep "@CreateRequestWithNoRequiredFieldsAndApprove" --headed => pass ở local
+npm run test-ticket-hanoiwork-prod -- test-ticket.spec.ts --grep "@CreateRequestAndAdditionalRequest" --headed => pass ở local
+npm run test-ticket-hanoiwork-prod -- test-ticket.spec.ts --grep "@CreateAndReserveRequest" --headed => pass ở local
+npm run test-ticket-hanoiwork-prod -- test-ticket.spec.ts --grep "@ApproverEditContent" --headed => pass ở local
+npm run test-ticket-hanoiwork-prod -- test-ticket.spec.ts --grep "@ApproverSpamRequest" --headed => pass ở local
+npm run test-ticket-hanoiwork-prod -- test-ticket.spec.ts --grep "@CreateRequestWithRequiredFieldsAndSendNotiChatbot" --headed 
+===========================
+*Gapo*:
+
+*calendar:
+git checkout feature/calendar
+test-calendar.spec.ts:365
+npm run test-calendar-gapowork-prod -- test-calendar.spec.ts --grep "@edit-add-remove-users-single" --headed
+npm run test-calendar-hanoiwork-prod -- test-calendar.spec.ts --grep "@edit-add-remove-users-single" --headed
+
 
 ===========================
 My account test trên Gapo: mytest1@yopmail.com /pass: Gapo@132/ VJIC6WUEUFK5O4CH5ZW72Y5VKBNCI6Z666D3B2CF6VV4A6NEOUIQ

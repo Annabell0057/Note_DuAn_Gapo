@@ -10,9 +10,11 @@ https://staging7.hanoiwork.vn/
 User 0900111129: 0900111129/Gapo@132
 0374244133/ Gapo@2024   => Lu Trinh SDT 2
 
-0900111121/Gapo@132
+0900111121/Gapo@132/ mã OTP 888888
 
 0900111145/Gapo@132
+
+0374741640/Gapo@2024 => lu trinh SDT 1
 
 *Beta HNW
 https://beta.work.hanoiwork.vn/
