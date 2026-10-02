@@ -19,3 +19,29 @@ User 0900111129: 0900111129/Gapo@132
 *Beta HNW
 https://beta.work.hanoiwork.vn/
 0966746782/Gapo@1324$
+
+*staging6 HNW đăng nhập bằng SSO
+CCCD: 001098038419  
+
+UCUSER-01: 0333335511 => Nhat Long SDT 11 => thất bại (dùng sđt của Hiếu)
+           0333335500 & cccd:026200005170 => Nhat Long SDT 1-1  => thành công
+
+UCUSER-02: 0333335522 => Nhat Long SDT 2
+
+UCUSER-03: 0333335522 và CCCD: 001098038418  => đổi "Nhat Long SDT 2" thành "Nhat Long SDT 2-3"
+
+UCUSER-04: 0333335522 và CCCD: 001098038419
+
+UCUSER-07: 0333335522 và tên Nhat Long SDT 2-4
+
+UCUSER-09: 
+0333335511 và tên Nhat Long SDT 11 và 00109803841X (lỗi)
+0333335522 và tên Nhat Long SDT 2-9 và 001098038419 (pass)
+0333335500 và Nhat Long SDT 1-1 và 00109803841X (lỗi)
+
+UCUSER-016: 0333335512 => Nhat Long SDT 1
+UCUSER-017: 0333335514 => Nhat Long SDT 3
+UCUSER-019: 0333335512 và 026200005170 Nhat Long SDT 19
+UCUSER-24:  0333335000 => Mytest
+
+0333335512  Nhat Long SDT 1811

@@ -553,6 +553,6 @@ test-calendar.spec.ts:365
 npm run test-calendar-gapowork-prod -- test-calendar.spec.ts --grep "@edit-add-remove-users-single" --headed
 npm run test-calendar-hanoiwork-prod -- test-calendar.spec.ts --grep "@edit-add-remove-users-single" --headed
 
-
+npm run test-task-gapowork-prod
 ===========================
 My account test trên Gapo: mytest1@yopmail.com /pass: Gapo@132/ VJIC6WUEUFK5O4CH5ZW72Y5VKBNCI6Z666D3B2CF6VV4A6NEOUIQ
