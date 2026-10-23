@@ -10,11 +10,18 @@ https://staging7.hanoiwork.vn/
 User 0900111129: 0900111129/Gapo@132
 0374244133/ Gapo@2024   => Lu Trinh SDT 2
 
-0900111121/Gapo@132/ mã OTP 888888
+0900111121/Gapo@132/ mã OTP 888888/ Long CN
 
 0900111145/Gapo@132
 
 0374741640/Gapo@2024 => lu trinh SDT 1
+
++84900111079/Gapo@132/ User 0900111079
+
+*HNW 
+https://hanoiwork.vn/
+
++84900111079/Gapo@132/ User 0900111079
 
 *Beta HNW
 https://beta.work.hanoiwork.vn/
@@ -45,3 +52,24 @@ UCUSER-019: 0333335512 và 026200005170 Nhat Long SDT 19
 UCUSER-24:  0333335000 => Mytest
 
 0333335512  Nhat Long SDT 1811
+0333331234  Nhat Long SDT 1234
+
+Nguyễn Văn E1 
+*mã pass tải phầm mềm trên ios:
+tester@gapo.com.vn/ yeuthuongdongdoi1234
+
+*bên staging của ios thì có thể bấm vào màn để chuyển giữa product vs staging; còn mới android thì phải xin bản build
+
+*Gapo product: 
+mytest1@yopmail.com / Long@37224720 / My test
+mytest2@yopmail.com / Gapo@132 / My test 2
+mytest3@yopmail.com/ Gapo@132 / My test 3
+mytest4@yopmail.com/ Gapo@132 / My test 4
+mytest5@yopmail.com/ Gapo@132 / My test 5
+
+*gapo staging:
+mytest1@yopmail.com / Gapo@132
+
+đăng nhập bằng mã định danh: "Tên tổ chức:gapo" + "Mã định danh:001098038419" + pass "Gapo@132" / Long Chu
+
+mytest123@yopmail.com / Gapo@132 => Long Chu 3

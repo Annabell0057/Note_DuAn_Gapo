@@ -47,3 +47,6 @@ https://www.gapowork.vn/project-management/523866125265220/browse/HANW-2814/
 
 account:
 https://docs.google.com/spreadsheets/d/13ySnIXv7zLUlJqV_QYb9fAjTYg9wsGg_doaJe5lJO4E/edit?copiedFromTrash=&gid=0#gid=0
+
+Link phân các nhiệm vụ do bên tester nào quản lý
+https://docs.google.com/spreadsheets/d/1ttfhzYNob4dQB3Kh-DYUDV7M8ZanVp7oeanaJYbuK-I/edit?gid=0#gid=0

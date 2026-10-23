@@ -545,6 +545,17 @@ npm run test-ticket-hanoiwork-prod -- test-ticket.spec.ts --grep "@ApproverEditC
 npm run test-ticket-hanoiwork-prod -- test-ticket.spec.ts --grep "@ApproverSpamRequest" --headed => pass ở local
 npm run test-ticket-hanoiwork-prod -- test-ticket.spec.ts --grep "@CreateRequestWithRequiredFieldsAndSendNotiChatbot" --headed 
 ===========================
+HNW:
+test-post.spec.ts:182
+npm run test-post-hanoiwork-prod -- test-post.spec.ts --grep "@editposttext" --headed
+
+
+test-ticket.spec.ts:745
+npm run test-ticket-hanoiwork-prod -- test-ticket.spec.ts --grep "@CreateRequestWithRequiredFieldsAndApprove" --headed
+npm run test-ticket-hanoiwork-prod -- test-ticket.spec.ts --grep "@CreateRequestWithNoRequiredFieldsAndApprove" --headed
+npm run test-ticket-hanoiwork-prod -- test-ticket.spec.ts --grep "@CreateRequestAndAdditionalRequest" --headed
+
+===========================
 *Gapo*:
 
 *calendar:
@@ -552,7 +563,72 @@ git checkout feature/calendar
 test-calendar.spec.ts:365
 npm run test-calendar-gapowork-prod -- test-calendar.spec.ts --grep "@edit-add-remove-users-single" --headed
 npm run test-calendar-hanoiwork-prod -- test-calendar.spec.ts --grep "@edit-add-remove-users-single" --headed
+npm run test-calendar-gapowork-prod
 
-npm run test-task-gapowork-prod
+*collabcalendar
+git checkout feature/collabcalendar
+npm run test-collabcalendar-gapowork-prod -- test-collabcalendar.spec.ts --grep "@edit-add-remove-from-repeat-collab" --headed
+
+*collaboration
+git checkout feature/workspace
+test-workspace.spec.ts:383
+npm run test-workspace-gapowork-prod -- test-workspace.spec.ts --grep "@addnewuser" --headed
+npm run test-workspace-gapowork-prod -- test-workspace.spec.ts --grep "@deleteuser" --headed
+
+*communication
+
+git checkout feature/chat
+test-chat.spec.ts:107
+npm run test-chat-gapowork-prod -- test-chat.spec.ts --grep "@creategroup" --headed
+npm run test-chat-hanoiwork-prod -- test-chat.spec.ts --grep "@creategroup" --headed
+
+npm run test-chat-gapowork-prod -- test-chat.spec.ts --grep "@reply Reply message" --headed
+npm run test-chat-hanoiwork-prod -- test-chat.spec.ts --grep "@reply Reply message" --headed
+
+npm run test-chat-gapowork-prod -- test-chat.spec.ts --grep "@pollvote poll vote" --headed
+
+npm run test-chat-gapowork-prod -- test-chat.spec.ts --grep "@pinmessage pin message" --headed
+
+npm run test-chat-gapowork-prod -- test-chat.spec.ts --grep "@creattask Create task from message" --headed
+
+git checkout feature/aichatbot
+test-aichatbot.spec.ts:120
+npm run test-aichatbot-gapowork-prod -- test-aichatbot.spec.ts --grep "@magicword verify Gavin Tin tức hot hôm nay" --headed
+npm run test-aichatbot-hanoiwork-prod -- test-aichatbot.spec.ts --grep "@magicword verify Gavin Tin tức hot hôm nay" --headed
+
+@vanto verify Vanto sự đồng thuận
+@botdocument verify Document Testing principle là gì ?
+@botdocument verify Document Nguyên tắc kiểm thử
+@botcustom verify Custom Bot HTTP Status Code:
+
+npm run test-aichatbot-gapowork-prod -- test-aichatbot.spec.ts --grep "@vanto verify Vanto sự đồng thuận" --headed
+npm run test-aichatbot-gapowork-prod -- test-aichatbot.spec.ts --grep "@botdocument verify Document Testing principle là gì ?" --headed
+npm run test-aichatbot-gapowork-prod -- test-aichatbot.spec.ts --grep "@botdocument verify Document Nguyên tắc kiểm thử" --headed
+
+npm run test-aichatbot-gapowork-prod -- test-aichatbot.spec.ts --grep "@botcustom verify Custom Bot HTTP Status Code:" --headed
+npm run test-aichatbot-hanoiwork-prod -- test-aichatbot.spec.ts --grep "@botcustom verify Custom Bot HTTP Status Code:" --headed
+
+npm run test-aichatbot-gapowork-prod -- test-aichatbot.spec.ts --grep "@vanto" --headed
+3 failed
+    [test-gapowork-prod-chrome-aichatbot] › tests\test-aichatbot.spec.ts:121:9 › Tes tức hot hôm nay 
+    [test-gapowork-prod-chrome-aichatbot] › tests\test-aichatbot.spec.ts:121:9 › Testại 
+    [test-gapowork-prod-chrome-aichatbot] › tests\test-aichatbot.spec.ts:121:9 › Tes thuận 
+
+*content
+git checkout feature/permission
+test-permission.spec.ts:643
+npm run test-permission-gapowork-prod -- test-permission.spec.ts --grep "@endorsemanagement Endorse Management Roles" --headed
+npm run test-permission-hanoiwork-prod -- test-permission.spec.ts --grep "@endorsemanagement Endorse Management Roles" --headed
+
+npm run test-permission-gapowork-prod -- test-permission.spec.ts --grep "@violationmanagement Violation Management Roles" --headed
+
+*discovery:
+
+git checkout feature/profile
+test-profile.spec.ts:248
+npm run test-profile-gapowork-prod -- test-profile.spec.ts --grep "@UsersEditJobInformation" --headed
+npm run test-profile-hanoiwork-prod -- test-profile.spec.ts --grep "@UsersEditJobInformation" --headed
+
+npm run test-profile-gapowork-prod -- test-profile.spec.ts --grep "@UsersEditAdditionalInformation" --headed
 ===========================
 My account test trên Gapo: mytest1@yopmail.com /pass: Gapo@132/ VJIC6WUEUFK5O4CH5ZW72Y5VKBNCI6Z666D3B2CF6VV4A6NEOUIQ
