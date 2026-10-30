@@ -630,5 +630,41 @@ npm run test-profile-gapowork-prod -- test-profile.spec.ts --grep "@UsersEditJob
 npm run test-profile-hanoiwork-prod -- test-profile.spec.ts --grep "@UsersEditJobInformation" --headed
 
 npm run test-profile-gapowork-prod -- test-profile.spec.ts --grep "@UsersEditAdditionalInformation" --headed
+
+===========================
+HNW
+
+*collaboration
+git checkout feature/workspace
+test-workspace.spec.ts:383
+npm run test-workspace-hanoiwork-prod -- test-workspace.spec.ts --grep "@exportmember export member" --headed
+
+npm run test-workspace-gapowork-prod -- test-workspace.spec.ts --grep "@exportmember export member" --headed
+
+*content
+test-permission.spec.ts:255
+git checkout feature/permission
+npm run test-permission-hanoiwork-prod -- test-permission.spec.ts --grep "@membermanagementbasic Basic Member Management Roles" --headed
+npm run test-permission-gapowork-prod -- test-permission.spec.ts --grep "@membermanagementbasic Basic Member Management Roles" --headed
+
+npm run test-permission-hanoiwork-prod -- test-permission.spec.ts --grep "@membermanagementadvance Advance Member Management Roles" --headed
+npm run test-permission-gapowork-prod -- test-permission.spec.ts --grep "@membermanagementadvance Advance Member Management Roles" --headed
+
+    [test-hanoiwork-prod-chrome-permission] › tests/test-permission.spec.ts:280:7 › Permission Tests › @membermanagementadvance Advance Member Management Roles  
+    [test-hanoiwork-prod-chrome-permission] › tests/test-permission.spec.ts:335:7 › Permission Tests › @memberinfor Member information settings Roles 
+    [test-hanoiwork-prod-chrome-permission] › tests/test-permission.spec.ts:496:7 › Permission Tests › @groupmanagement Group Management Roles  
+    [test-hanoiwork-prod-chrome-permission] › tests/test-permission.spec.ts:545:7 › Permission Tests › @postmanagement Post Management Roles  
+
+npm run test-permission-hanoiwork-prod -- test-permission.spec.ts --grep "@membermanagementadvance Advance Member Management Roles" --headed => pass
+npm run test-permission-hanoiwork-prod -- test-permission.spec.ts --grep "@memberinfor Member information settings Roles" --headed => lỗi
+npm run test-permission-hanoiwork-prod -- test-permission.spec.ts --grep "@groupmanagement Group Management Roles" --headed => pass
+npm run test-permission-hanoiwork-prod -- test-permission.spec.ts --grep "@postmanagement Post Management Roles" --headed => pass
+*discovery:
+git checkout feature/acknowledge
+test-acknowledge.spec.ts:494
+npm run test-acknowledge-hanoiwork-prod -- test-acknowledge.spec.ts --grep "@FilterTime Filter Time" --headed
+npm run test-acknowledge-gapowork-prod -- test-acknowledge.spec.ts --grep "@FilterTime Filter Time" --headed
+===========================
+npm run test-survey-quangtriwork-prod
 ===========================
 My account test trên Gapo: mytest1@yopmail.com /pass: Gapo@132/ VJIC6WUEUFK5O4CH5ZW72Y5VKBNCI6Z666D3B2CF6VV4A6NEOUIQ
